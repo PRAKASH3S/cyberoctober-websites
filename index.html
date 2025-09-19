@@ -1,115 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Awareness Month 2025 | UNT Cyber Club</title>
-   <style>
-    :root { --unt-green: #00853E; --unt-dark: #006A44; --unt-grey: #E6E6E6; }
-    body { font-family: Arial, sans-serif; margin: 0; background: white; color: #222; }
-    header { background: var(--unt-green); color: white; padding: 2.5em 1em 1.5em 1em; text-align: center; }
-    header h1 { font-size: 2.7em; margin: 0.3em 0 0.2em 0; }
-    header h2 { font-size: 1.55em; font-weight: 350; margin: 0; }
-    .main-action { margin: 2em 0 2.5em 0; }
-    .btn { 
-        background: var(--unt-dark); 
-        color: #fff; 
-        padding: 1.2em 2.4em; 
-        border: none; 
-        font-size: 1.4em; 
-        font-weight: bold;
-        border-radius: 7px; 
-        cursor: pointer; 
-        text-decoration: none;
-        box-shadow: 0 4px 18px 0 rgba(0,0,0,0.14), 0 1.5px 4px 0 rgba(255,255,255,0.12) inset;
-        border: 3px solid #fff;
-        transition: background 0.2s, color 0.2s;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cybersecurity Awareness Month 2025 | UNT Cyber Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --unt-green: #00853E;
+      --unt-dark: #006A44;
+      --unt-light: #E9FDF2;
+      --unt-blue: #002B45;
+      --gray-bg: #f7f7f9;
     }
-    .btn:hover, .btn:focus {
-        background: #00B863;
-        color: #fff;
-    }
-    section { max-width: 900px; margin: 2em auto; padding: 1.5em; background: var(--unt-grey); border-radius: 12px; box-shadow: 0 1px 7px #eee; }
-    h3 { color: var(--unt-green); border-bottom: 2px solid #d0d0d0; padding-bottom: 0.25em; margin-bottom: 0.6em; }
-    .schedule-list, .featured-topics { margin-top: 1em; }
-    .team-grid { display: grid; gap: 2em; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin: 1.5em 0; }
-    .team-card { text-align: center; background: white; padding: 1em; border-radius: 7px; box-shadow: 0 1px 4px #ccc; }
-    .team-card img { width: 120px; height: 145px; border-radius: 8px; object-fit: cover; border: 3px solid var(--unt-green); }
-    .social-links {margin-top: 2.5em;}
-    .social-links a { margin: 0 1.4em 0 0; text-decoration: none; color: #fff; font-size: 1.3em; font-weight: bold; }
-    .social-links a:visited { color: #fff; }
-    a:visited { color: var(--unt-dark); }
-    .contact { margin-top: 2.5em; }
-    @media (max-width:550px) { section{padding:1em} header{padding:1.2em 0.3em 1em} .team-grid{gap:1em} }
-</style>
 
+    body {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: var(--gray-bg);
+      color: #1c232b;
+      font-size: 1.07em;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--unt-green) 65%, #00b47e 100%);
+      color: white;
+      padding: 3.5em 1.5em 2.2em 1.5em;
+      text-align: center;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    }
+    header h1 {
+      font-size: 2.65em;
+      font-weight: 800;
+      margin-bottom: 0.3em;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 13px rgba(0,0,0,0.10);
+    }
+    header h2 {
+      font-size: 1.25em;
+      font-weight: 600;
+      margin: 0;
+      color: #f5fecd;
+      letter-spacing: .5px
+    }
+    .event-meta {
+      margin: 1em 0 1.3em 0;
+      font-weight: 600;
+      font-size: 1.18em;
+      color: #e0efe3;
+    }
+    .register-cta {
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      border-radius: 1em;
+      padding: 2.1em 1.2em 2.2em 1.2em;
+      margin: 2em auto 1em auto;
+      max-width: 450px;
+      transform: translateY(24px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-btn {
+      background: var(--unt-green);
+      color: #fff;
+      font-size: 1.29em;
+      font-weight: bold;
+      padding: 1.04em 2.2em;
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      cursor: pointer;
+      margin-bottom: .85em;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+      letter-spacing:.2px;
+      transition: background .22s;
+    }
+    .main-btn:hover, .main-btn:focus {
+      background: var(--unt-dark);
+      color: #f7fff1;
+    }
+    .register-cta .cta-note {
+      font-size:1.01em;
+      color: var(--unt-green);
+      font-weight: 600;
+      margin: 0;
+      letter-spacing:.1px
+    }
+    .socials {
+      margin: 1.5em auto 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+    .socials a {
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0,0,0,0.06);
+      padding: 0.4em 1.1em;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1.05em;
+      transition: background .18s;
+    }
+    .socials a:hover {
+      background: #fff;
+      color: var(--unt-green);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2em 1.7em 3em 1.7em;
+    }
+    section {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 1px 8px #eaf5ef;
+      margin-bottom: 2.3em;
+      padding: 2.0em 1.5em 1.3em 1.5em;
+    }
+    section:last-child {
+      margin-bottom: 0;
+    }
+    h3 {
+      color: var(--unt-green);
+      border-bottom: 2px solid #e7ead9;
+      padding-bottom: 0.11em;
+      margin-bottom: 0.9em;
+      font-size: 1.33em;
+      font-weight: 700;
+      letter-spacing:.1px
+    }
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.2em 0;
+    }
+    .schedule-list li {
+      margin: 0 0 0.7em 0;
+      font-weight: 500;
+    }
+    .featured-topics {
+      background: #eaf8f0;
+      padding: 0.6em 1.1em;
+      border-radius:8px;
+      font-size: 1em;
+      color: var(--unt-dark);
+    }
+    .team-grid {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      margin-top: 2.1em;
+    }
+    .team-card {
+      text-align: center;
+      background: linear-gradient(110deg,#f3fff9 60%,#e6f7ee 100%);
+      border-radius: 10px;
+      padding: 1.3em 1em;
+      box-shadow:0 2px 12px #e5efe6;
+      transition:transform .13s,box-shadow .13s;
+    }
+    .team-card:hover {
+      box-shadow: 0 6px 24px #a6e6bb;
+      transform: translateY(-4px) scale(1.03);
+    }
+    .team-card img {
+      width: 112px;
+      height: 140px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 1.5px 8px #aaddbb77;
+      border: 3px solid var(--unt-green);
+      margin-bottom: 0.8em;
+    }
+    .team-card strong {
+      color: var(--unt-green);
+      display: block;
+      font-size: 1.06em;
+      margin-top: .7em;
+    }
+    a {
+      color: var(--unt-green);
+      text-decoration: none;
+      font-weight:600
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive */
+    @media (max-width: 770px) {
+      header h1 { font-size: 2.2em; }
+      main { padding: .7em .2em .7em .2em; }
+      .register-cta { max-width: 97vw;}
+    }
+    @media (max-width: 550px) {
+      .register-cta { padding: 1.12em .2em 1.4em .2em; }
+      section { padding: 1.1em .4em .9em .5em;}
+      header {padding: 1.9em .1em 1.1em .1em;}
+    }
+  </style>
 </head>
 <body>
-<header>
+  <header>
     <h1>Cybersecurity Awareness Month 2025</h1>
     <h2>UNT Cyber Club | Learn. Connect. Secure.</h2>
-    <p>October | UNT Campus / Hybrid</p>
-    <div class="main-action">
-        <a href="https://forms.gle/dcZH5VQbCebDiaCw9" class="btn" target="_blank">Register Now</a>
+    <div class="event-meta">October &mdash; UNT Campus / Hybrid</div>
+    <div class="register-cta">
+      <a href="https://forms.gle/dcZH5VQbCebDiaCw9" class="main-btn" target="_blank">Register Now</a>
+      <div class="cta-note">Save your spot for CyberOctober!</div>
     </div>
-    <div class="social-links">
-        <a href="https://www.linkedin.com/company/itdscyberclub" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/untitdscyberclub/" target="_blank">Instagram</a>
-    </div>
-</header>
-<section>
-    <h3>About CyberOctober</h3>
-    <p>CyberOctober is part of the National Cybersecurity Awareness Month, designed to increase awareness, spark interest in the field, and empower students and faculty with real-world cyber defense fundamentals. We host interactive workshops, games, and industry talks to help you learn and network!</p>
-</section>
-<section>
-    <h3>Event Schedule & Interactive Sessions</h3>
-    <ul class="schedule-list">
+    <nav class="socials">
+      <a href="https://www.linkedin.com/company/itdscyberclub" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/untitdscyberclub/" target="_blank">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h3>About CyberOctober</h3>
+      <p>
+        <strong>CyberOctober</strong> is part of the National Cybersecurity Awareness Month, designed to increase awareness, spark interest in the field, and empower students and faculty with real-world cyber defense fundamentals. We host interactive workshops, games, and industry talks to help you learn and network!
+      </p>
+    </section>
+    <section>
+      <h3>Event Schedule & Interactive Sessions</h3>
+      <ul class="schedule-list">
         <li><b>Oct 10 (11:30 AM – 1:00 PM):</b> Cybersecurity Certifications and Careers</li>
         <li><b>Oct 17 (11:30 AM – 1:00 PM):</b> Fundamentals of Cybersecurity (XDR, IAM, Zero Trust, MITRE ATT&CK)</li>
         <li><b>Oct 24 (11:30 AM – 1:00 PM):</b> Governance, Privacy, Audit, and Law</li>
         <li><b>Oct 30 (2:00–5:00 PM):</b> UNT Information Security Symposium - Panel 1: Hiring the Cyber Workforce, Student Papers</li>
         <li><b>Oct 31 (9:00 AM–5:00 PM):</b> AI for Cybersecurity, Campus to Cyber Command (Panels 2–3)</li>
-    </ul>
-    <div class="featured-topics">
+      </ul>
+      <div class="featured-topics">
         <b>Featured activities:</b> Games, Q&A, CTI Bingo, Threat Actor Case Studies, Interactive Polls.
-    </div>
-</section>
-<section>
-    <h3>Guest Speakers</h3>
-    <ul>
+      </div>
+    </section>
+    <section>
+      <h3>Guest Speakers</h3>
+      <ul>
         <li>James Albert Arnold, Energy: Governance, Privacy, Audit, and Law (Confirmed)</li>
         <li>Alain Espinosa: Current Hiring Challenges (Confirmed)</li>
         <li>Vinay Bhatia: Governance, Privacy, Audit, and Law (Confirmed)</li>
         <li>Subbu Rama (CEO, BalkanID): Fundamentals of Cybersecurity</li>
         <li>Aman Tara (Wells Fargo, TBC); Ray Longoria (USAA, TBC); Karan, Alena Funtikova (State Farm, TBC)</li>
-    </ul>
-</section>
-<section>
-    <h3>Club Executive Board</h3>
-    <div class="team-grid">
-        <div class="team-card"><img src="Shola-President-ITDS-Cybersecurity-club.jpg" alt="Shola Habeeb, President"><div><b>Shola Habeeb</b><br>President</div></div>
-        <div class="team-card"><img src="Israel-Vice-President-ITDS-Cybersecurity-Club.jpg" alt="Israel Odebiyi, Vice President"><div><b>Israel Odebiyi</b><br>Vice President</div></div>
-        <div class="team-card"><img src="Stephie-Events-Director-Membership-Director-ITDS-Cybersecurity-Club.jpg" alt="Stephie Konan, Membership & Events Director"><div><b>Stephie Konan</b><br>Membership & Events Co-Director</div></div>
-        <div class="team-card"><img src="Bhupal-Workshop-Director-ITDS-Cybersecurity-Club.jpg" alt="Bhupal Reddy Maymula, Workshop Director"><div><b>Bhupal Reddy Maymula</b><br>Workshop Co-Director</div></div>
-        <div class="team-card"><img src="Supriya-Workshop-Director-ITDS-Cybersecurity-Club.jpg" alt="Supriya Bollineni, Workshop Director"><div><b>Supriya Bollineni</b><br>Workshop Co-Director</div></div>
-        <div class="team-card"><img src="prakashteki_communicationsdirector.jpg" alt="Prakash Teki, Communications Director"><div><b>Prakash Teki</b><br>Communications Co-Director</div></div>
-        <div class="team-card"><img src="Vikram-Communications-Director-ITDS-Cybersecurity-Club.jpg" alt="Aditya Vikram Reddy Vennapusala, Communications Director"><div><b>Aditya Vikram Reddy Vennapusala</b><br>Communications Co-Director</div></div>
-    </div>
-</section>
-<section>
-    <h3>Get Involved</h3>
-    <ul>
+      </ul>
+    </section>
+    <section>
+      <h3>Club Executive Board</h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="Shola-President-ITDS-Cybersecurity-club.jpg" alt="Shola Habeeb, President">
+          <strong>Shola Habeeb</strong>President
+        </div>
+        <div class="team-card">
+          <img src="Israel-Vice-President-ITDS-Cybersecurity-Club.jpg" alt="Israel Odebiyi, Vice President">
+          <strong>Israel Odebiyi</strong>Vice President
+        </div>
+        <div class="team-card">
+          <img src="Stephie-Events-Director-Membership-Director-ITDS-Cybersecurity-Club.jpg" alt="Stephie Konan, Membership & Events Co-Director">
+          <strong>Stephie Konan</strong>Membership &amp; Events Co-Director
+        </div>
+        <div class="team-card">
+          <img src="Bhupal-Workshop-Director-ITDS-Cybersecurity-Club.jpg" alt="Bhupal Reddy Maymula, Workshop Co-Director">
+          <strong>Bhupal Reddy Maymula</strong>Workshop Co-Director
+        </div>
+        <div class="team-card">
+          <img src="Supriya-Workshop-Director-ITDS-Cybersecurity-Club.jpg" alt="Supriya Bollineni, Workshop Co-Director">
+          <strong>Supriya Bollineni</strong>Workshop Co-Director
+        </div>
+        <div class="team-card">
+          <img src="prakashteki_communicationsdirector.jpg" alt="Prakash Teki, Communications Co-Director">
+          <strong>Prakash Teki</strong>Communications Co-Director
+        </div>
+        <div class="team-card">
+          <img src="Vikram-Communications-Director-ITDS-Cybersecurity-Club.jpg" alt="Aditya Vikram Reddy Vennapusala, Communications Co-Director">
+          <strong>Aditya Vikram Reddy Vennapusala</strong>Communications Co-Director
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Get Involved</h3>
+      <ul>
         <li>Join us on <a href="https://www.linkedin.com/company/itdscyberclub" target="_blank">LinkedIn</a>, <a href="https://www.instagram.com/untitdscyberclub/" target="_blank">Instagram</a></li>
         <li>Become a member or volunteer – sign up with the RSVP link above!</li>
-    </ul>
-</section>
-<section class="contact">
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:prakashteki@my.unt.edu">prakashteki@my.unt.edu</a></p>
-    <p>Questions? Reach out via email or DM us on Instagram!</p>
-</section>
+      </ul>
+    </section>
+    <section class="contact">
+      <h3>Contact</h3>
+      <p><b>Email:</b> <a href="mailto:prakashteki@my.unt.edu">prakashteki@my.unt.edu</a></p>
+      <p>Questions? Reach out via email or DM us on Instagram!</p>
+    </section>
+  </main>
 </body>
 </html>
-
-
-
